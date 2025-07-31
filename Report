@@ -1,0 +1,39 @@
+📋 Loan Approval Prediction – Detailed Report
+This project aims to predict whether a loan application will be approved based on applicant information. The dataset included both numerical and categorical features such as gender, marital status, income, loan amount, and credit history.
+
+🔍 Data Preprocessing
+The raw dataset contained missing values and categorical features that needed to be prepared for machine learning models. Missing numerical values were filled using the median, while categorical values were filled using the most frequent values. Label Encoding was applied to transform categorical variables into numerical format.
+
+⚖️ Class Imbalance
+The target variable (‘Loan_Status’) was found to be imbalanced, with significantly more approved loans than rejected ones. To handle this, SMOTE (Synthetic Minority Oversampling Technique) was applied to the training data to generate synthetic samples of the minority class and balance the dataset.
+
+🤖 Model Training
+Two models were trained and compared:
+
+Logistic Regression: A linear model useful for binary classification.
+
+Decision Tree Classifier: A non-linear model that can capture complex patterns in the data.
+
+Both models were trained on the balanced data and evaluated on the original test set.
+
+📊 Evaluation Metrics
+Because of the imbalance in the target class, accuracy alone was not sufficient. Therefore, precision, recall, and F1-score were used to evaluate performance:
+
+Logistic Regression: Precision = 0.82, Recall = 0.85, F1-Score = 0.83
+
+Decision Tree: Precision = 0.78, Recall = 0.88, F1-Score = 0.82
+
+Logistic Regression performed slightly better in terms of precision and F1-score, while the Decision Tree had higher recall, meaning it was better at identifying true positive loan approvals.
+
+📈 Visualization
+Two visualizations were created to compare the models:
+
+Bar Chart showing precision, recall, and F1-score side-by-side for each model.
+
+Dotted Line Plot illustrating metric trends across models.
+
+These visuals help in understanding the trade-offs between model choices.
+
+✅ Conclusion
+Both models are viable for loan approval prediction. If minimizing false negatives is a priority (to avoid wrongly rejecting eligible applicants), the Decision Tree may be preferred. However, for balanced and interpretable predictions, Logistic Regression is a strong choice. This model can assist financial institutions in automating and improving loan approval processes.
+
